@@ -623,9 +623,9 @@ h6 {
 }
 
 #services .title {
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 #services .title a {
@@ -639,7 +639,7 @@ h6 {
 #services .description {
   font-size: 14px;
   line-height: 28px;
-  margin-bottom: 0;
+  margin-bottom: -40;
   text-align: center;
 }
 

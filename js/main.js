@@ -1,24 +1,24 @@
-(function($) {
+(function ($) {
     "use strict";
 
     // Preloader (if the #preloader div exists)
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         if ($('#preloader').length) {
-            $('#preloader').delay(100).fadeOut('slow', function() {
+            $('#preloader').delay(100).fadeOut('slow', function () {
                 $(this).remove();
             });
         }
     });
 
     // Back to top button
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.back-to-top').fadeIn('slow');
         } else {
             $('.back-to-top').fadeOut('slow');
         }
     });
-    $('.back-to-top').click(function() {
+    $('.back-to-top').click(function () {
         $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
@@ -27,7 +27,7 @@
     new WOW().init();
 
     // Header scroll class
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('#header').addClass('header-scrolled');
         } else {
@@ -40,7 +40,7 @@
     }
 
     // Smooth scroll for the navigation and links with .scrollto classes
-    $('.main-nav a, .mobile-nav a, .scrollto').on('click', function() {
+    $('.main-nav a, .mobile-nav a, .scrollto').on('click', function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
             if (target.length) {
@@ -78,10 +78,10 @@
     var main_nav = $('.main-nav, .mobile-nav');
     var main_nav_height = $('#header').outerHeight();
 
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         var cur_pos = $(this).scrollTop();
 
-        nav_sections.each(function() {
+        nav_sections.each(function () {
             var top = $(this).offset().top - main_nav_height,
                 bottom = top + $(this).outerHeight();
 
@@ -99,11 +99,11 @@
     });
 
     // Porfolio isotope and filter
-    $(window).on('load', function() {
+    $(window).on('load', function () {
         var portfolioIsotope = $('.portfolio-container').isotope({
             itemSelector: '.portfolio-item'
         });
-        $('#portfolio-flters li').on('click', function() {
+        $('#portfolio-flters li').on('click', function () {
             $("#portfolio-flters li").removeClass('filter-active');
             $(this).addClass('filter-active');
 
@@ -129,6 +129,57 @@
             768: { items: 4 },
             900: { items: 6 }
         }
+    });
+
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '315',
+            width: '560',
+            videoId: 'l-gQLqv9f4o',
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING) {
+            //player is playing
+        } else {
+            //player is paused
+        }
+    }
+
+    function stopVideo() {
+        player.stopVideo();
+    }
+
+    function playVideo() {
+        player.playVideo();
+    }
+
+    function pauseVideo() {
+        player.pauseVideo();
+    }
+
+
+    $(document).on('opened.fndtn.reveal', '[data-reveal]', function () {
+        playVideo();
+    });
+
+    $(document).on('closed.fndtn.reveal', '[data-reveal]', function () {
+        pauseVideo();
     });
 
 })(jQuery);
