@@ -1045,13 +1045,8 @@ h6 {
 
 #clients img {
   max-width: 80%;
-  opacity: 0.5;
   transition: 0.3s;
   padding: 15px 0;
-}
-
-#clients img:hover {
-  opacity: 1;
 }
 
 #clients .owl-nav,
