@@ -10,6 +10,11 @@
         }
     });
 
+    $('.carousel').carousel({
+        interval: 6000,
+        pause: "false"
+      });
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
