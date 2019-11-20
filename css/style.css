@@ -1530,6 +1530,11 @@ h6 {
   #intro {
     height: auto;
   }
+
+  #video {
+    width: 400px;
+  }
+
   #intro .container {
     height: auto !important;
   }
