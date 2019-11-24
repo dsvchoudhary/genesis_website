@@ -509,26 +509,31 @@ h6 {
 
 #about {
   padding: 150px 0;
+  background-image: url("../img/lennyweb.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  background-size: cover;
 }
 
 @media (max-width: 574px) {
   #about {
     padding: 40px 0;
-  }
-}
+    margin-left: 0%
+}}
 
 #about .about-content {
   padding-top: 0px;
 }
 
 #about .about-content h2 {
-  color: #413e66;
+  color: #c1bcff;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
 #about .about-content h3 {
-  color: #696592;
+  color: #c3bfff;
   font-weight: 400;
   font-size: 28px;
 }
