@@ -1141,6 +1141,16 @@ h6 {
   font-weight: 300;
 }
 
+#pricing .list-group-head {
+  color: #322f4e;
+  font-weight: 600;
+}
+
+#pricing .list-group-dsc {
+  color: #413e66;
+  font-weight: 300;
+}
+
 #pricing .card h3 {
   font-size: 64px;
   margin-bottom: 0px;
