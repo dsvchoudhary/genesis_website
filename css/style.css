@@ -479,7 +479,7 @@ h6 {
 /* Sections Header
 --------------------------------*/
 
-.section-header h3 {
+.section-header h1 {
   font-size: 36px;
   color: #413e66;
   text-align: center;
@@ -673,7 +673,7 @@ h6 {
   float: left;
 }
 
-#why-us .why-us-content .features h4 {
+#why-us .why-us-content .features h2 {
   font-size: 24px;
   font-weight: 600;
   margin-left: 56px;
@@ -935,7 +935,7 @@ h6 {
   margin-left: 140px;
 }
 
-#testimonials .testimonial-item h4 {
+#testimonials .testimonial-item h2 {
   font-size: 15px;
   color: #999;
   margin: 0 0 15px 0;
@@ -1016,8 +1016,9 @@ h6 {
   height: 80px;
 }
 
-#team .member h4 {
+#team .member h2 {
   font-weight: 700;
+  margin-top: 1px;
   margin-bottom: 2px;
   font-size: 18px;
   color: #fff;
